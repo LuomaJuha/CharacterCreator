@@ -28,7 +28,7 @@ public class ToJson {
         
         
         
-        File file = new File ("testi.json");
+        File file = new File ("c://", "testi.json");
         BufferedWriter out = new BufferedWriter(new FileWriter(file)); 
         out.write(jsonString);
         out.close();

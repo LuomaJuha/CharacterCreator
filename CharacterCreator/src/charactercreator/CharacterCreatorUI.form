@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -37,7 +37,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="panel_personal">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Personal">
@@ -52,49 +52,101 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="scroll_notes" pref="898" max="32767" attributes="0"/>
+                              <Component id="static_notes" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="static_name" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="input_name" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="static_race" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="list_races" min="-2" pref="129" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="static_age" max="32767" attributes="0"/>
+                                      <Component id="static_culture" min="-2" pref="49" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="input_age" max="32767" attributes="0"/>
+                                      <Component id="list_cultures" min="-2" pref="96" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="static_home" max="32767" attributes="0"/>
+                                      <Component id="static_parent" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="list_clans" max="32767" attributes="0"/>
+                                      <Component id="list_parent_occupations" min="-2" pref="139" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="static_occupation" min="-2" pref="74" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="list_occupations" min="-2" pref="151" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="static_notes" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="static_name" min="-2" pref="38" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="input_name" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="static_race" min="-2" pref="38" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="list_races" min="-2" pref="129" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="static_strength" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="static_age" max="32767" attributes="0"/>
-                                  <Component id="static_culture" min="-2" pref="49" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="static_constitution" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_size" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_intelligence" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="static_power" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_dexterity" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_appearence" min="-2" pref="38" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="input_strength" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="input_constitution" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="input_size" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="input_intelligence" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="input_power" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="input_dexterity" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="input_appearence" min="-2" pref="38" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="static_damagemodifier" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="input_age" max="32767" attributes="0"/>
-                                  <Component id="list_cultures" min="-2" pref="96" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="static_home" max="32767" attributes="0"/>
-                                  <Component id="static_parent" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="input_dmg_modifier" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_move_rate" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="list_clans" pref="139" max="32767" attributes="0"/>
-                                  <Component id="list_parent_occupations" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="static_occupation" min="-2" pref="74" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="list_occupations" min="-2" pref="151" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
+                              <Component id="input_move_rate" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_dexterity_rate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="input_dexterity_rate" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_size_rate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="input_size_rate" min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="static_melee_rate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="input_melee_rate" min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -121,11 +173,44 @@
                           <Component id="static_parent" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="list_parent_occupations" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="76" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="static_strength" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_constitution" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_size" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_intelligence" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_power" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_dexterity" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="static_appearence" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="input_strength" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_constitution" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_size" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_intelligence" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_power" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_dexterity" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_appearence" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="static_damagemodifier" alignment="3" pref="31" max="32767" attributes="0"/>
+                          <Component id="input_dmg_modifier" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="static_move_rate" alignment="3" max="32767" attributes="0"/>
+                          <Component id="input_move_rate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="static_dexterity_rate" alignment="3" max="32767" attributes="0"/>
+                          <Component id="input_dexterity_rate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="static_size_rate" alignment="3" max="32767" attributes="0"/>
+                          <Component id="input_size_rate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="static_melee_rate" alignment="3" max="32767" attributes="0"/>
+                          <Component id="input_melee_rate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Component id="static_notes" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="140" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="scroll_notes" min="-2" pref="140" max="-2" attributes="0"/>
+                      <EmptySpace pref="212" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -171,6 +256,41 @@
                 <Property name="text" type="java.lang.String" value="Notes"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JLabel" name="static_strength">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="STR"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_constitution">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CON"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_size">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="SIZ"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_intelligence">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="INT"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_power">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="POW"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_dexterity">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DEX"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_appearence">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="APP"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JComboBox" name="list_races">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -190,7 +310,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="input_age">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="list_cultures">
@@ -253,7 +373,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Container class="javax.swing.JScrollPane" name="scroll_notes">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -268,9 +388,102 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JTextField" name="input_strength">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_constitution">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_size">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_intelligence">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_power">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_dexterity">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_appearence">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="input_appearenceActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_dmg_modifier">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_move_rate">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_dexterity_rate">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_size_rate">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="input_melee_rate">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_damagemodifier">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DMG MOD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_move_rate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="MOVE RATE"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_dexterity_rate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DEX SRM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_size_rate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+ SIZ SRM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="static_melee_rate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="= MELEE SRM"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="panel_skills">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Skills">
@@ -282,12 +495,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="886" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="918" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="363" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="572" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

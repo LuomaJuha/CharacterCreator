@@ -364,6 +364,7 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
        Character character = new Character();
+       aaa;
        character.setAge("15");
        character.setAppereance(1);
        character.setClan("Wu tang");

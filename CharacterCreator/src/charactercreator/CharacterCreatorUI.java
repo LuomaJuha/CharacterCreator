@@ -364,7 +364,6 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
        Character character = new Character();
-       aaa;
        character.setAge("15");
        character.setAppereance(1);
        character.setClan("Wu tang");
@@ -403,7 +402,7 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(CharacterCreatorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        aa;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -5,6 +5,10 @@
  */
 package charactercreator;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Suolapurkki
@@ -52,7 +56,7 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
         list_parent_occupations = new javax.swing.JComboBox<>();
         list_occupations = new javax.swing.JComboBox<>();
         scroll_notes = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        input_notes = new javax.swing.JTextArea();
         input_strength = new javax.swing.JTextField();
         input_constitution = new javax.swing.JTextField();
         input_size = new javax.swing.JTextField();
@@ -70,6 +74,7 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
         static_dexterity_rate = new javax.swing.JLabel();
         static_size_rate = new javax.swing.JLabel();
         static_melee_rate = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         panel_skills = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -116,9 +121,9 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
 
         list_occupations.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        scroll_notes.setViewportView(jTextArea1);
+        input_notes.setColumns(20);
+        input_notes.setRows(5);
+        scroll_notes.setViewportView(input_notes);
 
         input_strength.setText("0");
 
@@ -164,6 +169,13 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
 
         static_melee_rate.setText("= MELEE SRM");
 
+        jButton1.setText("jButton1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel_personalLayout = new javax.swing.GroupLayout(panel_personal);
         panel_personal.setLayout(panel_personalLayout);
         panel_personalLayout.setHorizontalGroup(
@@ -201,9 +213,12 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
                                 .addComponent(list_clans, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(list_parent_occupations, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(static_occupation, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(list_occupations, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(panel_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(panel_personalLayout.createSequentialGroup()
+                                    .addComponent(static_occupation, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(list_occupations, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(panel_personalLayout.createSequentialGroup()
                         .addComponent(static_strength, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -274,7 +289,8 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
                     .addComponent(static_culture)
                     .addComponent(list_cultures, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(static_parent)
-                    .addComponent(list_parent_occupations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(list_parent_occupations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(static_strength, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -309,7 +325,7 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
                 .addComponent(static_notes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scroll_notes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Personal", panel_personal);
@@ -345,6 +361,21 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_input_appearenceActionPerformed
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+       Character character = new Character();
+       character.setAge("15");
+       character.setAppereance(1);
+       character.setClan("Wu tang");
+       character.setConstitution(4);
+       character.setCulture("None");
+        try {
+            input_notes.setText(ToJson.createJson(character));
+        } catch (IOException ex) {
+            Logger.getLogger(CharacterCreatorUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -379,6 +410,12 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
                 
             }
         });
+        
+        
+    }
+    
+    private void saveData(){
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -392,12 +429,13 @@ public class CharacterCreatorUI extends javax.swing.JFrame {
     private javax.swing.JTextField input_melee_rate;
     private javax.swing.JTextField input_move_rate;
     private javax.swing.JTextField input_name;
+    private javax.swing.JTextArea input_notes;
     private javax.swing.JTextField input_power;
     private javax.swing.JTextField input_size;
     private javax.swing.JTextField input_size_rate;
     private javax.swing.JTextField input_strength;
+    private javax.swing.JButton jButton1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JComboBox<String> list_clans;
     private javax.swing.JComboBox<String> list_cultures;
     private javax.swing.JComboBox<String> list_occupations;
